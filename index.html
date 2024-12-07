@@ -7,18 +7,14 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <button class="mode-toggle" onclick="toggleMode()">Switch to Dark Mode</button>
+
   <div class="container">
-    <div class="circle-wrapper red-wrapper">
-      <div class="circle-content"><p>Terrible</div>
-      <div class="circle red duplicate"></div>
-      <div class="circle red duplicate"></div>
-      <div class="circle red duplicate"></div>
-    </div>
-    <div class="circle-wrapper yellow-wrapper">
-      <div class="circle-content"><p>Bad</p></div>
-      <div class="circle yellow duplicate"></div>
-      <div class="circle yellow duplicate"></div>
-      <div class="circle yellow duplicate"></div>
+    <div class="circle-wrapper green-wrapper">
+      <div class="circle-content"><p>Great</p></div>
+      <div class="circle green duplicate"></div>
+      <div class="circle green duplicate"></div>
+      <div class="circle green duplicate"></div>
     </div>
     <div class="circle-wrapper blue-wrapper">
       <div class="circle-content"><p>Good</p></div>
@@ -26,12 +22,27 @@
       <div class="circle blue duplicate"></div>
       <div class="circle blue duplicate"></div>
     </div>
-    <div class="circle-wrapper green-wrapper">
-      <div class="circle-content"><p>Great</p></div>
-      <div class="circle green duplicate"></div>
-      <div class="circle green duplicate"></div>
-      <div class="circle green duplicate"></div>
+    <div class="circle-wrapper yellow-wrapper">
+      <div class="circle-content"><p>Bad</p></div>
+      <div class="circle yellow duplicate"></div>
+      <div class="circle yellow duplicate"></div>
+      <div class="circle yellow duplicate"></div>
+    </div>
+    <div class="circle-wrapper red-wrapper">
+      <div class="circle-content"><p>Terrible</div>
+      <div class="circle red duplicate"></div>
+      <div class="circle red duplicate"></div>
+      <div class="circle red duplicate"></div>
     </div>
   </div>
+  <script>
+    let isDarkMode = false;
+    
+    function toggleMode() {
+      isDarkMode = !isDarkMode;
+      document.body.classList.toggle('dark-mode', isDarkMode);
+      document.querySelector('.mode-toggle').textContent = isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode";
+    }
+  </script>
 </body>
 </html>
