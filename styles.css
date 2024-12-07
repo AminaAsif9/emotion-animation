@@ -55,15 +55,15 @@ body {
   }
   
   .yellow.duplicate {
-    background-color: rgba(255, 221, 85, 0.523);
+    background-color: rgba(255, 221, 85, 0.541);
   }
   
   .blue.duplicate {
-    background-color: rgba(85, 170, 255, 0.573);
+    background-color: rgba(85, 170, 255, 0.541);
   }
   
   .green.duplicate {
-    background-color: rgba(85, 255, 136, 0.532);
+    background-color: rgba(85, 255, 136, 0.541);
   }
 
 
