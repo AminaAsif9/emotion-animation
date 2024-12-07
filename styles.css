@@ -1,16 +1,49 @@
+/* Base styles */
+:root {
+  --bg-color-light: #f0f0f0;
+  --bg-color-dark: #1c1c1c;
+  --text-color-light: #000;
+  --text-color-dark: #fff;
+}
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    background: #000;
-    font-family: Arial, sans-serif;
-    overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  transition: background-color 0.3s, color 0.3s;
+}
+  body.light-mode {
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+  }
+  
+  body.dark-mode {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+  }
+  
+  button.mode-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  button.mode-toggle:hover {
+    background-color: #555;
   }
   
   .container {
-    display: grid;
+    display: inline-flex;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     position: relative;
@@ -21,14 +54,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 250px;
-    height: 250px;
+    width: 150px;
+    height: 150px;
   }
   
   .circle-content {
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,29 +74,30 @@ body {
   
   .duplicate {
     position: absolute;
-    width: 220px;
-    height: 220px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1); 
     animation: circular-motion 6s infinite ease-in-out;
     z-index: 1;
   }
   
-   /* Circle-specific colors */
+  /* Circle-specific colors */
   .red.duplicate {
-    background-color: rgba(255, 85, 85, 0.541);
+    background-color: rgba(255, 179, 179, 0.541);
   }
   
   .yellow.duplicate {
-    background-color: rgba(255, 221, 85, 0.541);
+    background-color: rgba(255, 241, 166, 0.541);
   }
   
   .blue.duplicate {
-    background-color: rgba(85, 170, 255, 0.541);
+    background-color: rgba(163, 200, 255, 0.541);
   }
   
   .green.duplicate {
-    background-color: rgba(85, 255, 136, 0.541);
+    background-color: rgba(163, 228, 181, 0.541);
+
   }
 
 
