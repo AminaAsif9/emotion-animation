@@ -49,21 +49,21 @@ body {
     z-index: 1;
   }
   
-  /* Circle-specific colors */
+   /* Circle-specific colors */
   .red.duplicate {
-    background-color: rgba(255, 85, 85, 0.482);
+    background-color: rgba(255, 85, 85, 0.541);
   }
   
   .yellow.duplicate {
-    background-color: rgba(255, 221, 85, 0.402);
+    background-color: rgba(255, 221, 85, 0.523);
   }
   
   .blue.duplicate {
-    background-color: rgba(85, 170, 255, 0.466);
+    background-color: rgba(85, 170, 255, 0.573);
   }
   
   .green.duplicate {
-    background-color: rgba(85, 255, 136, 0.434);
+    background-color: rgba(85, 255, 136, 0.532);
   }
 
 
